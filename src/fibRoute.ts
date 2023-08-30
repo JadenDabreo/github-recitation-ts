@@ -7,7 +7,7 @@ import {Request, Response} from 'express';
 export default (req: Request, res: Response) => {
   const num: number = req.params;
 
-  const fibN: number = fibonacci(num);
+  const fibN: number = fibonacci(parseInt(num));
   let result: string = `fibonacci(${num}) is ${fibN}`;
 
   if (fibN < 0) {
