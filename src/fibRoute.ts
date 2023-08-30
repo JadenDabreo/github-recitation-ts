@@ -5,9 +5,9 @@ import * as express from 'express';
 import {Request, Response} from 'express';
 
 export default (req: Request, res: Response) => {
-  const num: number = req.params;
+  const num: number = parseInt(req.params);
 
-  const fibN: number = fibonacci(parseInt(num));
+  const fibN: number = fibonacci(num);
   let result: string = `fibonacci(${num}) is ${fibN}`;
 
   if (fibN < 0) {
